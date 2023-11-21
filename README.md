@@ -17,7 +17,9 @@ Analysis of Preliminary Visual 1
 
 In the visualization above, we have created a bar chart that shows the COVID-19 mortality rate by age group, using the "COVID.19.Deaths" column for the y-axis and "Age.Group" for the x-axis. Each bar in the chart represents a different age group, and the height of the bars corresponds to the total number of COVID-19 deaths within that age group. This visualization allows us to quickly identify which age groups have the highest mortality rates. As we can see, as age increases, the number of COVID-19 deaths greatly increases. In particular, the number of deaths more than doubles from the 45-54 age group and the 55-64 age group. The number of deaths is highest in the two oldest age groups (75-84 and 85+). We will use this initial analysis to identify patterns and trends that may be of interest for further investigation in the project.
 
-
 Analysis of Preliminary Visual 2
 
 Analysis of Preliminary Visual 3
+
+This visualization allows us to see the distribution of COVID-19 deaths across different age groups while also considering the contributing health condition groups. By stacking the bars for each condition side-by-side within each individual age group, we can observe the relative proportions of health conditions within each age. For example, it may reveal whether certain health conditions are more prevalent in specific age groups and contribute more to COVID-19 mortality. This can help identify high-risk groups and guide targeted public health interventions. In the visual, we can see that respiratory diseases are the leading cause of COVID-19 deaths among all age groups above 35 years old. We can also see that the "all other" category of conditions is the 2nd leading cause of COVID-19 deaths among those same age groups. Finally, we can see that certain categories such as injury/poisioning, malignant neoplasms, and obesity are not one of the leading contributors to COVID-19 deaths among any of the age groups.
+
