@@ -12,3 +12,8 @@ This question addresses the complex interplay between age, pre-existing health c
 Analysis of Preliminary Visual 1
 
 In the visualization above, we have created a bar chart that shows the COVID-19 mortality rate by age group, using the "COVID.19.Deaths" column for the y-axis and "Age.Group" for the x-axis. Each bar in the chart represents a different age group, and the height of the bars corresponds to the total number of COVID-19 deaths within that age group. This visualization allows us to quickly identify which age groups have the highest mortality rates. As we can see, as age increases, the number of COVID-19 deaths greatly increases. In particular, the number of deaths more than doubles from the 45-54 age group and the 55-64 age group. The number of deaths is highest in the two oldest age groups (75-84 and 85+). We will use this initial analysis to identify patterns and trends that may be of interest for further investigation in the project.
+
+
+Analysis of Preliminary Visual 2
+
+Analysis of Preliminary Visual 3
