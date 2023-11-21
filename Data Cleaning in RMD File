@@ -1,0 +1,24 @@
+```{r}
+df <- read.csv("/Users/jacksontaylor/Desktop/STAT451/Final/FinalDataSet.csv")
+```
+
+```{r}
+columns = c("State", "Condition.Group", "Age.Group", "COVID.19.Deaths")
+df <- subset(df, select = columns)
+df <- subset(df, State != "United States")
+df <- subset(df, Age.Group != "Not stated" & Age.Group != "All Ages")
+df <- na.omit(df)
+df <- df[!df$Condition.Group %in% "COVID-19", ]
+df <- df %>%
+  rename(region = State)
+
+df$Condition.Group <- ifelse(df$Condition.Group == "Intentional and unintentional injury, poisoning, and other adverse events", "Injury/poisoning/other adverse events", df$Condition.Group)
+
+df$Condition.Group <- ifelse(df$Condition.Group == "All other conditions and causes (residual)", "All other", df$Condition.Group)
+```
+
+```{r}
+summed_data <- df %>%
+  group_by(region, Condition.Group, Age.Group) %>%
+  summarise(COVID.19.Deaths = sum(COVID.19.Deaths))
+```
