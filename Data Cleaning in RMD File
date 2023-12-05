@@ -1,7 +1,11 @@
+# We will make two data sets out of the original data set through cleaning. 
+
 ```{r}
 df <- read.csv("/Users/jacksontaylor/Desktop/STAT451/Final/FinalDataSet.csv")
 ```
 
+
+#Cleaning for first data set
 ```{r}
 columns = c("State", "Condition.Group", "Age.Group", "COVID.19.Deaths")
 df <- subset(df, select = columns)
@@ -17,8 +21,38 @@ df$Condition.Group <- ifelse(df$Condition.Group == "Intentional and unintentiona
 df$Condition.Group <- ifelse(df$Condition.Group == "All other conditions and causes (residual)", "All other", df$Condition.Group)
 ```
 
+#Saving first data set
+```{r}
+write.csv(df, "shinydata_1.csv", row.names = F)
+```
+
+#Cleaning for second data set
 ```{r}
 summed_data <- df %>%
   group_by(region, Condition.Group, Age.Group) %>%
   summarise(COVID.19.Deaths = sum(COVID.19.Deaths))
 ```
+
+#Saving second data set
+```{r}
+write.csv(summed_data, "shinydata.csv", row.names = FALSE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
