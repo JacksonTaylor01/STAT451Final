@@ -12,13 +12,16 @@ df <- subset(df, select = columns)
 df <- subset(df, State != "United States")
 df <- subset(df, Age.Group != "Not stated" & Age.Group != "All Ages")
 df <- na.omit(df)
+
 df <- df[!df$Condition.Group %in% "COVID-19", ]
-df <- df %>%
-  rename(region = State)
+df <- df %>% rename(region = State)
 
-df$Condition.Group <- ifelse(df$Condition.Group == "Intentional and unintentional injury, poisoning, and other adverse events", "Injury/poisoning/other adverse events", df$Condition.Group)
-
+df$Condition.Group <- ifelse(df$Condition.Group == "Intentional and unintentional injury, poisoning, and other adverse events", "Injury/poisoning", df$Condition.Group)
 df$Condition.Group <- ifelse(df$Condition.Group == "All other conditions and causes (residual)", "All other", df$Condition.Group)
+df$Condition.Group <- ifelse(df$Condition.Group == "Respiratory diseases", "Respiratory", df$Condition.Group)
+df$Condition.Group <- ifelse(df$Condition.Group == "Circulatory diseases", "Circulatory", df$Condition.Group)
+df$Condition.Group <- ifelse(df$Condition.Group == "Alzheimer disease", "Alzheimers", df$Condition.Group)
+df$Condition.Group <- ifelse(df$Condition.Group == "Vascular and unspecified dementia", "Vascular/dementia", df$Condition.Group)
 ```
 
 #Saving first data set
