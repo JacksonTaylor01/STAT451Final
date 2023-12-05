@@ -8,12 +8,12 @@ header <- dashboardHeader(title = "COVID Deaths in US")
 
 sidebar <- dashboardSidebar(
   sidebarMenu(
-    menuItem("US Map",
-             tabName = "map", 
-             icon = icon("globe")),
     menuItem("Summary Charts",
              tabName = "age",
              icon = icon("user")),
+    menuItem("US Map",
+             tabName = "map", 
+             icon = icon("globe")),
     menuItem("Summary Statistics",
              tabName = "summary",
              icon = icon("info-circle"))
