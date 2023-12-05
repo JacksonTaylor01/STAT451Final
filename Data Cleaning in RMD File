@@ -26,7 +26,7 @@ df$Condition.Group <- ifelse(df$Condition.Group == "All other conditions and cau
 write.csv(df, "shinydata_1.csv", row.names = F)
 ```
 
-#Cleaning for second data set
+#Cleaning for second data set (make sure to still run cleaning for the first data set first)
 ```{r}
 summed_data <- df %>%
   group_by(region, Condition.Group, Age.Group) %>%
