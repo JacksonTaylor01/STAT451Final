@@ -38,10 +38,10 @@ function(input, output, session) {
       states_covid <- states_map %>% left_join(total_state_values)
       
       ggplot(states_covid, aes(x=long, y=lat, group=group)) +
-        geom_polygon(aes(fill=(100*COVID_Deaths/Population)), color="black") +
+        geom_polygon(aes(fill=(COVID_Deaths/Population)), color="black") +
         scale_fill_gradient2(low="cornflowerblue",
                              high="firebrick",
-                             midpoint=2.5, 
+                             midpoint=0.025, 
                              name = "Percentage") + 
     labs(title = "United States by Percentage of COVID Deaths", x = NULL, y = NULL) +
     theme(plot.title = element_text(size = 30),
